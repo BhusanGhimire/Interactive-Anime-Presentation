@@ -141,14 +141,12 @@ function setBackground(imageIndex) {
 function backgroundCall(){
 imgMenuArray.forEach((child,index)=>{
 	if(index == 6){
-	imgMenuArray[6].oncontextmenu = (e) => {
-		e.preventDefault()
+	imgMenuArray[6].oncontextmenu = () => {
 		timeout = window.setInterval(() => {
 		index = Random(0,imgMenu.children.length-1);
 		setBackground(index);
 		},2000);
-	imgMenuArray[7].oncontextmenu = (e) =>{
-		e.preventDefault();
+	imgMenuArray[7].oncontextmenu = () =>{
 		window.clearInterval(timeout);
 	}
 	}

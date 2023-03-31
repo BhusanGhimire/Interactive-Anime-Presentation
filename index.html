@@ -1,0 +1,53 @@
+<body>
+	<div id="scroll">
+		<img src="images/dx.jpg" alt="" id="smallImg">
+		<p>Have a nice day:)</p>
+	</div>
+	<img src="https://cdn3.iconfinder.com/data/icons/ui-basic-12/20/Artboard_18-512.png" alt="something is wrong" id="img-for_dynamic-image-menu">
+	<div id="dynamic-image-menu">
+		<span style="background:cyan"></span>
+		<span style="background:gold"></span>
+		<span style="background:magenta"></span>
+		<span style="background:lime"></span>
+		<span style="background: #8729f2"></span>
+		<span style="background: #f77c99"></span>
+		<span style="background: #f0be5b"></span>
+		<span style="background: #6a5bf0" onclick="backgroundCall()"></span>
+		<label for="theme">Theme</label>
+		<select name="themeMenu" id="theme">
+			<option value="boys">Boys</option>
+			<option value="girls" selected>Girls</option>
+		</select>
+	</div>
+
+	<div id="main">
+		<img src="https://imgs.search.brave.com/en8mjB9gKVa0Ew10wm5uyIxgpKUeCrfT1wfBokmCPLw/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5U/aFRIc2JueHVRY0JB/QkFSQTdhUG53SGFI/YSZwaWQ9QXBp"><!--Main character image-->
+		<div id="para">
+			<span>@Atena</span><br>
+			<span>Anime character</span>
+		</div>
+
+		<ul id="list">
+			<li><a href="https://www.instagram.com">Instagram</a></li>
+			<li><a href="https://www.reddit.com">Reddit</a></li>
+			<li><a href="https://www.patreon.com">Patreon</a></li>
+			<li><a href="https://www.twitter.com">Twitter</a></li>
+			<li><a href="https://www.facebook.com">FanPage FB</a></li>
+		</ul>
+	</div><!-- #main div close -->
+
+   	<div style="display: inline-block;"> <!--Made just to place iframe by it. Not a great idea but it should work :) -->
+		<div id="imagesBox"><!-- Images of that small scroll circle -->
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1zHPeJ1oxmqZaMR3JKWdTqMGn1TmSJTlUdq-BDVW1E4FBp8FAWe2qmp4gkbLOVIFdhPY&usqp=CAU" class="slideImages">
+		<img src="images/Red shenhe.jpg" class="slideImages">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCtcAu_EINRKUJX12V7FrN_zfKvOTGDPXU9m6ZqE78AEemfJ2gZtXHTwscwdqzCa1LN70&usqp=CAU" class="slideImages">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqqWAfdUoG_nN7UrtTD9URM9DavXC4X5ty6Q&usqp=CAU" class="slideImages">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIb0OlmaZ1ZZlQBfW9OkYsCqj0NF9X43v7yQ&usqp=CAU" class="slideImages">
+			<span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+			<span class="arrow next" onclick="controller(1)">&#10095;</span>
+		</div><!--imageboxDivClose -->    
+	</div>
+
+	<iframe src="https://www.youtube.com/embed/kzeFKLpyOdI"></iframe>
+	<br>
+	<div id="logo">Linktree</div>

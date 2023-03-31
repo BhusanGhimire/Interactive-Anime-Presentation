@@ -1,0 +1,238 @@
+	* {
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background: linear-gradient(to right bottom,aqua 20%, magenta 50%,lime 90%);
+		background: url('https://w0.peakpx.com/wallpaper/306/277/HD-wallpaper-anime-huashijw-torii-night-sky.jpg');
+		background-size: cover;
+		 scrollbar-width: none; /* Firefox 64+ */
+  		-ms-overflow-style: none; /* Internet Explorer and Edge */
+  		overflow-y: scroll;
+	}
+	body::-webkit-scrollbar {
+ 		 display: none;
+	}
+
+	#scroll {
+		border: 1px solid white;
+		background: rgba(225, 225, 225, 0.8);
+		filter: contrast(120%) brightness(120%) saturate(120%);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		border-radius: 10vh;
+		margin-top: 5px;
+		width: 100%;
+		z-index: 1;
+		scale: 0;
+		position:fixed;
+		transition: 0.25s scale;
+		transform-origin: center;
+	}
+
+	#scroll img {
+		height: 7vh;
+		width: 10vw;
+		border-radius: 50%;
+		translate: -40% 0;
+	}
+
+	#scroll p {
+		color: rgba(225, 100, 150, 0.7);
+	}
+
+	#main img {
+		border-radius: 50%;
+		height: 12vh;
+		width: 12vh;
+		margin: 15px 40%;
+	}
+
+	#main span {
+		margin-left: 40%;
+		color: gold;
+		font-family: 'Poppins'
+	}
+
+	#main span:nth-child(1) {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	#list li {
+		list-style: none;
+		width: 100%;
+		border: 1px solid cyan;
+		border-radius: 50vh;
+		height: 7vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 4%;
+		transform: translateX(-5%);
+		transition: all 0.2s;
+	}
+
+	#list li:hover {
+		background: rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+	}
+
+	#list li a {
+		text-decoration: none;
+		color: aquamarine;
+		font-family: 'Varela Round';
+	}
+
+	#logo {
+		font-weight: bold;
+		color: lime;
+		font-family: 'Arimo';
+		font-size: 20px;
+		margin-bottom: 5px;
+		text-align: center;
+
+	}
+
+	#imagesBox {
+		border: 10px dotted gold;
+		height:25vh;
+		width: 35vw;
+		margin-left: 2.5%;
+		border-radius: 50%;
+		margin-top: 40%;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#imagesBox img {
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		position: absolute;
+		display: none;
+	}
+	#imagesBox .arrow{
+		color: aquamarine;
+		position: absolute;
+		z-index: 5;
+		cursor: pointer;
+		font-size: 25px;
+		font-weight: bold;
+	}
+	#imagesBox .prev{
+		left: -20px;
+	}
+	#imagesBox .next{
+		right: -20px;
+	}
+	iframe {
+		display: inline-block;
+		width: 40%;
+		height: auto;
+		margin-left: 12%;
+		border-radius: 10%;
+		margin-top: 30%;
+		border: 1px solid aqua;
+		padding: 1%;
+		background: rgba(0, 0, 0, 0.2);
+		margin-right: 5%;
+	}
+	#dynamic-image-menu {
+		text-align: right;
+		transition: 0.25s width;
+		min-height: 100vh;
+		position: absolute;
+		right: 0;
+		top: 8%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		gap: 2rem;
+		width: 0;
+		overflow: hidden;
+	}
+	#dynamic-image-menu span {
+		border-radius: 50%;
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		margin: 5px 2.5px;
+		z-index: 2;
+	}
+	#dynamic-image-menu span:hover {
+		cursor: pointer;
+		scale: 1.1;
+	}
+	#img-for_dynamic-image-menu{
+		width: 4vmax;
+		height:auto;
+		float: right;
+		margin: 2.5vmax 4vmax;
+		filter: contrast(180%);
+		z-index: 2;
+	}
+	#img-for_dynamic-image-menu:hover{
+		cursor: pointer;
+		background: rgba(0, 0, 0, 0.25);
+	}
+	#dynamic-image-menu label,#dynamic-image-menu select,#dynamic-image-menu select option{
+		border:1px solid white;
+		background: rgba(225, 225,225, 0.7);
+		border-radius: 1vmin;
+		font-family: "poppins",sans-serif;
+		font-size: 10px;
+		padding: 2.5px;
+		cursor: pointer;
+		z-index: 2;
+	}
+	#dynamic-image-menu select {
+		transition: 0.25s scale;
+		scale: 0;
+		width: inherit;
+	}
+
+	@media screen and (min-width:690px)
+	/*When device is PC*/
+		{
+		body {
+			background: url('images/RYT.png');
+			background-size: cover;
+			background-position: 50% 65%;
+		}
+
+		#imagesBox {
+			width: 25vh;
+			margin-top: 20%;
+			translate:60% 0%;
+		}
+
+		#list li,
+		#scroll {
+			width: 80%;
+			margin-left: 10%;
+		}
+
+		#scroll img {
+			width: 7vw;
+			margin-left: 5%;
+		}
+
+		iframe {
+			width: 20%;
+			margin-left: 52.5%;
+		}
+
+		#list li:hover {
+			scale: 1.1;
+		}
+		#dynamic-image-menu span{
+		width: 15px;
+		height: 15px;
+		}
+}

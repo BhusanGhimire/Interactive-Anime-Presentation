@@ -90,8 +90,6 @@ let label = imgMenu.getElementsByTagName("label")[0]
 let themes = imgMenu.getElementsByTagName("select")[0]
 let mainCharacterImage = document.getElementById("main").children[0]
 let mainCharacterName = document.getElementById("main").children[1].children[0]
-console.log(mainCharacterImage)
-console.log(mainCharacterName)
 
 label.addEventListener("click",()=>{
 	themes.style.scale = (themes.style.scale == "0") ? "1":"0"//to show or hide theme menu(boys or girls menu)

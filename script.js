@@ -86,13 +86,13 @@ let Boylinks = [
 links = Girllinks;
 let imgMenu = document.getElementById("dynamic-image-menu");
 let imgMenuArray = [...imgMenu.children];
-let label = imgMenu.getElementsByTagName("label")[0]
-let themes = imgMenu.getElementsByTagName("select")[0]
-let mainCharacterImage = document.getElementById("main").children[0]
-let mainCharacterName = document.getElementById("main").children[1].children[0]
+let label = imgMenu.querySelector("label");
+let themes = imgMenu.querySelector("select");
+let mainCharacterImage = document.querySelector("#main img");
+let mainCharacterName = document.querySelector("#main #para span");
 
 label.addEventListener("click",()=>{
-	themes.style.scale = (themes.style.scale == "0") ? "1":"0"//to show or hide theme menu(boys or girls menu)
+	themes.style.scale = (themes.style.scale == "0") ? "1":"0";//to show or hide theme menu(boys or girls menu)
 })
 	//changes elements(objects) of "links" array and also changes the image and name of the character inside #main according to the item seleced in themes menu
   themes.addEventListener("change", function() {
@@ -112,7 +112,7 @@ label.addEventListener("click",()=>{
 
 
 		//Will popup that good day message according to current time
-		let scroll = document.getElementById('scroll')
+		let scroll = document.getElementById('scroll');
 		window.addEventListener('scroll', displayShow);
 		function displayShow() {
 			if (window.pageYOffset > 100) {
@@ -171,11 +171,10 @@ function Random(min,max){
 
 		//Will change images of #imgesBox
 		let numbering = 0;
-		slideshow(numbering)
+		slideshow(numbering);
 		function controller(imgNo){
 			numbering = numbering + imgNo;
 			slideshow(numbering);
-			console.log(numbering)
 		}
 		
 		function slideshow(funcNum){
@@ -191,7 +190,7 @@ function Random(min,max){
 			for(let every of slides){
 				every.style.display = 'none';
 			}
-			slides[funcNum].style.display='block'
+			slides[funcNum].style.display='block';
 		}
 
 

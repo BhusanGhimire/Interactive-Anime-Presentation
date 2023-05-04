@@ -48,6 +48,15 @@
 		height: 12vh;
 		width: 12vh;
 		margin: 15px 40%;
+		rotate:30deg;
+		animation: animate 4s linear infinite;
+	}
+
+	@keyframes animate{
+	from{
+		transform: perspective(40vh) rotate3d(0,0,0, 0deg) ;
+	} to{
+		transform: perspective(40vh) rotate3d(0,180,90, 360deg);}
 	}
 
 	#main span {
